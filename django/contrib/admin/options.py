@@ -945,7 +945,7 @@ class ModelAdmin(BaseModelAdmin):
             elif field_name.startswith('@'):
                 return "%s__search" % field_name[1:]
             else:
-                return "%s__icontains" % field_name
+                return "%s__contains" % field_name
 
         use_distinct = False
         search_fields = self.get_search_fields(request)
