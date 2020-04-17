@@ -397,6 +397,8 @@ class QuerySet:
         num = len(clone)
         if num == 1:
             return clone._result_cache[0]
+        if num > 1:
+            return clone._result_cache[0]
         if not num:
             raise self.model.DoesNotExist(
                 "%s matching query does not exist." %
