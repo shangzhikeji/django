@@ -183,3 +183,12 @@ class Page(collections.Sequence):
         if self.number == self.paginator.num_pages:
             return self.paginator.count
         return self.number * self.paginator.per_page
+
+#optimizing-django-admin-paginator
+#https://medium.com/@hakibenita/optimizing-django-admin-paginator-53c4eb6bfca3
+class DumbPaginator(Paginator):
+   """
+   Paginator that does not count the rows in the table.
+   """
+   def count(self):
+       return 99999999999

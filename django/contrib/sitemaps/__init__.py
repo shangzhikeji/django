@@ -83,7 +83,7 @@ class Sitemap:
         if self.protocol is not None:
             protocol = self.protocol
         if protocol is None:
-            protocol = 'http'
+            protocol = 'https'
 
         # Determine domain
         if site is None:
