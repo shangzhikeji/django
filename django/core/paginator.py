@@ -82,7 +82,8 @@ class Paginator:
     def count(self):
         """Return the total number of objects, across all pages."""
         try:
-            return self.object_list.count()
+            return 10000000
+            #return self.object_list.count()
         except (AttributeError, TypeError):
             # AttributeError if object_list has no count() method.
             # TypeError if object_list.count() requires arguments
